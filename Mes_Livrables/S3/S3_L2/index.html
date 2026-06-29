@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Livrable 2 | Composant Carte</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet" />
+
+    <!-- Liaison CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+
+    <!-- Conteneur centré pour afficher la carte au milieu de la page -->
+    <div id="page-center">
+
+      <article class="card">
+
+        <!-- IMAGE : photo du cours, centrée par le CSS -->
+        <div class="card-image">
+          <img
+            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=220&fit=crop"
+            alt="Online coding course"
+          />
+        </div>
+
+        <!-- CONTENU TEXTE : padding géré par le CSS -->
+        <div class="card-body">
+
+          <!-- Catégorie -->
+          <span class="card-category">Web Development</span>
+
+          <!-- Titre du cours -->
+          <h2 class="card-title">CSS Fundamentals & Box Model</h2>
+
+          <!-- Description -->
+          <p class="card-description">
+            Master the core concepts of CSS — selectors, the Box Model,
+            and professional styling techniques.
+          </p>
+
+          <!-- Infos : durée + niveau -->
+          <div class="card-meta">
+            <span>Time: 4 hours</span>
+            <span>Level: Beginner</span>
+          </div>
+
+          <!-- Prix + bouton -->
+          <div class="card-footer">
+            <span class="card-price"> XAF 13,112 </span>
+            <button class="card-button">Enroll Now</button>
+          </div>
+
+        </div>
+      </article>
+
+    </div>
+
+  </body>
+</html>

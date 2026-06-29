@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arsène Portfolio</title>
+
+    <!-- Google Fonts : polices importées depuis internet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet" />
+
+    <!-- Liaison CSS : connecte ce HTML à notre feuille de style -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+
+    <header>
+      <h1>Arsène Gloire AKIANA</h1>
+      <p id="tagline">Full Stack Developer in Training | Akieni Academy, Brazzaville</p>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          I am a Full Stack Developer in training at <strong>Akieni Academy</strong>
+          in Brazzaville, Congo. I am learning to build clean, structured, and accessible
+          web applications using modern HTML5 and CSS.
+        </p>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+
+        <!-- class="project-card" réutilisée sur les deux articles -->
+        <article class="project-card">
+          <header>
+            <h3>S2 Mini-Project (Semantic HTML5 Portfolio)</h3>
+          </header>
+          <p>
+            A personal portfolio built using <strong>exclusively semantic HTML5</strong>,
+            with zero custom CSS. Styled automatically via a classless stylesheet
+            (<em>semanstyle.css</em>) that rewards correct use of native HTML elements.
+          </p>
+          <p><strong>Stack:</strong> HTML5, Classless CSS, GitHub Pages</p>
+        </article>
+
+        <article class="project-card">
+          <header>
+            <h3>S3 Mini-Project (CSS Fundamentals & Box Model)</h3>
+          </header>
+          <p>
+            Applying CSS styling to the S2 HTML structure. Learning the Box Model,
+            CSS selectors (ID & Class), and building a professional visual identity
+            from scratch.
+          </p>
+          <p><strong>Stack:</strong> HTML5, Custom CSS, Google Fonts, GitHub Pages</p>
+        </article>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out for collaboration or any opportunity.</p>
+        <form>
+          <fieldset>
+            <legend>Your Information</legend>
+
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name..." required />
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="???@gmail.com" required />
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="6"
+              placeholder="Tell me about your project or opportunity..."
+              required></textarea>
+
+            <div>
+              <button type="submit">Send</button>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+
+    </main>
+
+    <footer>
+      <p id="footer-title">Let's connect</p>
+      <div id="footer-links">
+        <a href="https://github.com/arsene-akiana">GitHub</a>
+        <a href="http://linkedin.com/in/arsene-akiana">LinkedIn</a>
+        <a href="mailto:akianaarsenegloire@email.com">Email</a>
+      </div>
+      <p id="footer-copy">© 2026 Arsène Gloire AKIANA | Akieni Academy</p>
+    </footer>
+
+  </body>
+</html>

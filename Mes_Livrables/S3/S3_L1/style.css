@@ -1,0 +1,240 @@
+
+/* VARIABLES :
+   Valeurs réutilisables dans tout le fichier.
+   Changer une couleur ici = changer partout. */
+:root {
+  --couleur-principale: #2563eb;   /* bleu */
+  --couleur-texte: #1a1a2e;        /* presque noir */
+  --couleur-discret: #6b7280;      /* gris */
+  --couleur-bordure: #e5e7eb;      /* gris clair */
+  --couleur-fond-carte: #f9fafb;   /* blanc cassé */
+  --police-titre: 'Poppins', sans-serif;
+  --police-texte: 'Inter', sans-serif;
+}
+
+
+/*  * = sélecteur universel : cible tous les éléments. */
+* {
+  box-sizing: border-box; /*le padding et la border sont inclus dans la largeur (width). Mode moderne.*/
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--police-texte);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--couleur-texte);
+  background-color: #ffffff;
+  max-width: 860px;
+  margin: 0 auto;       /* auto gauche+droite = centrage */
+  padding: 2rem 1.5rem;
+}
+
+h1 {
+  font-family: var(--police-titre);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-family: var(--police-titre);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--couleur-principale);
+}
+
+h3 {
+  font-family: var(--police-titre);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+header {
+  padding: 3rem 0 2rem 0;
+  margin-bottom: 3rem;
+  border-bottom: 2px solid var(--couleur-bordure);
+}
+
+/* Sélecteur ID : cible <p id="tagline">
+   Le # signifie ID. Unique sur la page. */
+#tagline {
+  color: var(--couleur-discret);
+  font-size: 1rem;
+  margin-top: 0.25rem;
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--couleur-principale);
+}
+
+/* Pseudo-classe :hover -> au survol de la souris */
+nav a:hover {
+  text-decoration: underline;
+}
+
+section {
+  margin-bottom: 3.5rem;
+}
+
+#about p {
+  max-width: 600px;
+}
+
+
+/* CARTES PROJETS 
+   Sélecteur CLASS : .project-card → cible class="project-card".
+   Le . signifie CLASS. Réutilisable sur plusieurs éléments.
+
+   BOX MODEL visible ici :
+   margin  → espace extérieur (sous la carte)
+   border  → la bordure de la carte
+   padding → espace intérieur (entre bordure et texte)
+   content → le texte à l'intérieur */
+
+.project-card {
+  background-color: var(--couleur-fond-carte);
+  border: 1px solid var(--couleur-bordure);  /* border */
+  border-radius: 10px;
+  padding: 1.75rem;                          /* padding */
+  margin-bottom: 1.5rem;                     /* margin */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+/* :hover sur la carte -> légère ombre au survol */
+.project-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+article header {
+  border-bottom: 1px dashed var(--couleur-bordure);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  /* Annule les styles du header global */
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+
+/* LE FORMULAIRE  */
+form {
+  background-color: var(--couleur-fond-carte);
+  border: 1px solid var(--couleur-bordure);
+  border-radius: 10px;
+  padding: 2rem;
+  margin-top: 1.5rem;
+}
+
+fieldset {
+  border: 1px solid var(--couleur-bordure);
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: #ffffff;
+}
+
+legend {
+  font-weight: 700;
+  color: var(--couleur-principale);
+  padding: 0 0.5rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Sélecteur d'attribut : cible les input selon leur type */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--couleur-bordure);
+  border-radius: 6px;
+  font-family: var(--police-texte);
+  font-size: 1rem;
+  background-color: #ffffff;
+  color: var(--couleur-texte);
+}
+
+/* :focus -> quand l'utilisateur clique dans le champ */
+input:focus,
+textarea:focus {
+  outline: none; 
+  border-color: var(--couleur-principale);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+button {
+  background-color: var(--couleur-principale);
+  color: #ffffff;
+  border: none;
+  padding: 0.7rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1.25rem;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+
+/* --- FOOTER ---
+   Sélecteur de balise : cible <footer>. */
+footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--couleur-bordure);
+  text-align: center;
+}
+
+/* Sélecteurs ID dans le footer */
+#footer-title {
+  font-family: var(--police-titre);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+#footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+#footer-links a {
+  color: var(--couleur-principale);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#footer-links a:hover {
+  text-decoration: underline;
+}
+
+#footer-copy {
+  font-size: 0.8rem;
+  color: var(--couleur-discret);
+}

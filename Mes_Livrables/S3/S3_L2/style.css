@@ -1,0 +1,135 @@
+/*VARIABLES*/
+:root {
+  --couleur-principale: #2563eb;
+  --couleur-texte: #1a1a2e;
+  --couleur-discret: #6b7280;
+  --couleur-bordure: #e5e7eb;
+  --police-titre: 'Poppins', sans-serif;
+  --police-texte: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--police-texte);
+  background-color: #f1f5f9;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ID : unique, centre et limite la largeur */
+#page-center {
+  padding: 2rem;
+}
+
+.card {
+  width: 340px;                          /* largeur fixe de la carte */
+  background-color: #ffffff;
+  border: 1px solid var(--couleur-bordure); /* border */
+  border-radius: 12px;
+  margin: 0 auto;                        /* margin : centre la carte */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;   /* cache ce qui dépasse les coins arrondis */
+
+  /* Transition pour l'effet hover */
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+/* EFFET HOVER : s'active quand la souris passe sur la carte */
+.card:hover {
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px); /* monte légèrement */
+}
+
+.card-image {
+  width: 100%;          /* prend toute la largeur de la carte */
+  background-color: #e2e8f0;
+}
+
+.card-image img {
+  display: block;       /* supprime l'espace sous l'image (inline par défaut) */
+  width: 100%;          /* l'image s'étire sur toute la largeur */
+  height: 180px;
+  object-fit: cover;    /* recadre l'image sans la déformer */
+}
+
+
+
+.card-body {
+  padding: 1.25rem 1.5rem 1.5rem 1.5rem; /* haut | droite | bas | gauche */
+  /* Le padding crée l'espace intérieur entre la bordure et le texte. */
+}
+
+
+/*CLASS .card-category : petit label coloré en haut. */
+.card-category {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--couleur-principale);
+  background-color: #eff6ff;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+.card-title {
+  font-family: var(--police-titre);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--couleur-texte);
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
+}
+
+.card-description {
+  font-size: 0.88rem;
+  color: var(--couleur-discret);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.card-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.82rem;
+  color: var(--couleur-discret);
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--couleur-bordure);
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* justify-content: space-between les écarte aux extrêmes. */
+}
+
+.card-price {
+  font-family: var(--police-titre);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--couleur-texte);
+}
+
+.card-button {
+  background-color: var(--couleur-principale);
+  color: #ffffff;
+  border: none;
+  padding: 0.55rem 1.25rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.card-button:hover {
+  background-color: #1d4ed8;
+}

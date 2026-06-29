@@ -1,0 +1,164 @@
+
+/* VARIABLES */
+:root {
+  --couleur-principale: #2563eb;
+  --couleur-principale-dark: #1d4ed8;
+  --couleur-texte: #1a1a2e;
+  --couleur-bordure: #e5e7eb;
+  --police-titre: 'Poppins', sans-serif;
+  --police-texte: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--police-texte);
+  color: var(--couleur-texte);
+  background-color: #ffffff;
+}
+
+/* ID #navbar : barre de navigation fixe en haut */
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo à gauche, nav à droite */
+  padding: 1.25rem 4rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--couleur-bordure);
+  position: sticky;  /* reste visible quand on fait défiler la page */
+  top: 0;
+  z-index: 10;       /* reste au-dessus des autres éléments */
+}
+
+/* ID #navbar-brand : le nom/logo du site */
+#navbar-brand {
+  font-family: var(--police-titre);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--couleur-principale);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--couleur-texte);
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--couleur-principale);
+}
+
+/* ID #hero : la section principale.
+   background-image -> image de fond (pas de balise <img> dans le HTML).
+   Aucun style inline : tout vient du CSS. */
+#hero {
+  background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1400&fit=crop');
+  background-size: cover;      /* l'image couvre toute la section */
+  background-position: center; /* centrée */
+  background-repeat: no-repeat;
+
+  /* Superpose un calque sombre semi-transparent sur l'image
+     pour que le texte blanc reste lisible */
+  background-color: rgba(0, 0, 0, 0.55);
+  background-blend-mode: multiply;
+
+  min-height: 88vh;  /* presque toute la hauteur de l'écran */
+  display: flex;
+  align-items: center;     /* centre le contenu verticalement */
+  justify-content: center; /* centre le contenu horizontalement */
+}
+
+/* ID #hero-content : le bloc de texte centré dans le hero */
+#hero-content {
+  text-align: center;
+  max-width: 700px;
+  padding: 2rem;
+}
+
+.hero-badge {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-family: var(--police-titre);
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85); /* blanc légèrement transparent */
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 560px;
+  margin-left: auto;   /* ces deux lignes centrent le paragraphe */
+  margin-right: auto;
+}
+
+
+/* ID #hero-actions : conteneur des deux boutons */
+#hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center; /* boutons centrés */
+  flex-wrap: wrap;         /* passent à la ligne sur petit écran */
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: var(--couleur-principale);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.85rem 2rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--couleur-principale-dark);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  display: inline-block;
+  background-color: transparent;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.85rem 2rem;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- adapte la page à la largeur de l'écran -->
+    <title>KodeVia | Projet S4</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700;800&display=swap" rel="stylesheet" />
+
+    <!-- Liaison CSS : aucun style inline dans le HTML -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+
+    <!-- Livrable 01 : barre nav, Flexbox + sticky -->
+    <header id="navbar">
+      <div id="navbar-brand">KodeVia</div>
+      <nav>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#card-deck">Courses</a></li>
+          <li><a href="#bento-gallery">Paths</a></li>
+          <li><a href="#holy-grail">Dashboard</a></li>
+          <li><a href="#portfolio">Projects</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Livrable 05 : SaaS Hero, superposition + Flexbox -->
+    <section id="hero">
+      <div id="hero-content">
+        <span class="hero-badge">Learn to code from scratch</span>
+
+        <h1 class="hero-title">
+          Build the Web.<br/> <!-- br/ force un retour à la ligne ici -->
+          Shape the Future.
+        </h1>
+
+        <p class="hero-subtitle">
+          Join thousands of developers learning HTML, CSS, JavaScript and more
+          at KodeVia — hands-on, project-based, and 100% practical.
+        </p>
+
+        <div id="hero-actions">
+          <!-- href="#" : lien fictif, aucune page cible pour l'instant -->
+          <a href="#" class="btn-primary">Start Learning Free</a>
+          <a href="#" class="btn-secondary">View Curriculum</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Livrable 02 : Holy Grail, 5 zones en Grid -->
+    <section id="holy-grail">
+      <h2 class="section-title">Your Learning Dashboard</h2>
+
+      <div class="grail-wrapper">
+        <!-- Chaque zone porte le nom utilisé dans grid-area (CSS) -->
+        <header class="grail-header">Your Learning Progress</header>
+
+        <aside class="grail-sidebar">
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+          </ul>
+        </aside>
+
+        <main class="grail-main">
+          <p class="grail-current-label">Currently Learning</p>
+          <p class="grail-current-title">Flexbox & CSS Grid</p>
+          <p>65% complete</p>
+        </main>
+
+        <aside class="grail-aside">
+          <p>12 courses completed</p>
+          <p>4.8 average rating</p>
+        </aside>
+
+        <footer class="grail-footer">Need help? Contact support</footer>
+      </div>
+    </section>
+
+    <!-- Livrable 03 : Bento Gallery, asymétrique en Grid -->
+    <section id="bento-gallery">
+      <h2 class="section-title">Explore Our Learning Paths</h2>
+
+      <div class="bento-wrapper">
+        <!-- bento-large = occupe 2 colonnes et 2 lignes -->
+        <div class="bento-item bento-large bg-fullstack">
+          <span class="bento-tag">Flagship Path</span>
+          Fullstack Development
+        </div>
+        <div class="bento-item bento-wide bg-frontend">Frontend Development</div>
+        <div class="bento-item bg-backend">Backend Development</div>
+        <div class="bento-item bg-uiux">UI/UX Design</div>
+        <div class="bento-item bento-tall bg-mobile">Mobile Development</div>
+      </div>
+    </section>
+
+    <!-- Livrable 04 : Card Deck, cartes adaptatives en Grid -->
+    <section id="card-deck">
+      <h2 class="section-title">Popular Courses</h2>
+
+      <div class="deck-wrapper">
+
+        <!-- Une carte = un cours, la structure se répète 3 fois -->
+        <article class="card">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=220&fit=crop" alt="CSS course" />
+          </div>
+          <div class="card-body">
+            <span class="card-category">Web Development</span>
+            <h3 class="card-title">CSS Fundamentals & Box Model</h3>
+            <p class="card-description">Master selectors, the Box Model, and professional styling.</p>
+            <div class="card-meta">
+              <span>4 hours</span>
+              <span>Beginner</span>
+            </div>
+            <div class="card-footer">
+              <span class="card-price">XAF 13,112</span>
+              <button class="card-button">Enroll Now</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=400&h=220&fit=crop" alt="JS course" />
+          </div>
+          <div class="card-body">
+            <span class="card-category">Web Development</span>
+            <h3 class="card-title">JavaScript Essentials</h3>
+            <p class="card-description">Learn variables, functions, and DOM manipulation from scratch.</p>
+            <div class="card-meta">
+              <span>6 hours</span>
+              <span>Beginner</span>
+            </div>
+            <div class="card-footer">
+              <span class="card-price">XAF 15,500</span>
+              <button class="card-button">Enroll Now</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=220&fit=crop" alt="Flexbox and Grid course" />
+          </div>
+          <div class="card-body">
+            <span class="card-category">Web Development</span>
+            <h3 class="card-title">Flexbox & CSS Grid</h3>
+            <p class="card-description">Build modern, responsive layouts with confidence.</p>
+            <div class="card-meta">
+              <span>5 hours</span>
+              <span>Intermediate</span>
+            </div>
+            <div class="card-footer">
+              <span class="card-price">XAF 14,000</span>
+              <button class="card-button">Enroll Now</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Challenge final : Portfolio Bento, grid-template-areas responsive -->
+    <section id="portfolio">
+      <h2 class="section-title">Student Projects</h2>
+
+      <div class="portfolio-wrapper">
+        <!-- portfolio-hero = zone "h", le plus grand projet -->
+        <div class="portfolio-item portfolio-hero bg-project-ecommerce">
+          <span class="portfolio-tag">Featured</span>
+          E-Commerce Dashboard
+        </div>
+        <div class="portfolio-item portfolio-main bg-project-weather">Weather App</div>
+        <div class="portfolio-item portfolio-side bg-project-portfolio">Portfolio Site</div>
+        <div class="portfolio-item portfolio-footer">
+          Built by KodeVia students across the Fullstack, Frontend, and UI/UX paths.
+        </div>
+      </div>
+    </section>
+
+  </body>
+</html>
